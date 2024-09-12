@@ -1,59 +1,97 @@
-<h1 align="center">Advanced Auth Tutorial 🔒 </h1>
+Secure App - Full Stack Authentication System:
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+Overview:
+This repository contains a full-stack authentication system with separate frontend and backend implementations. The backend is built with Node.js and Express, using MongoDB for data storage and Mailtrap for email handling. The frontend is built with React, Vite, and Tailwind CSS.
 
-[Video Tutorial on Youtube](https://youtu.be/pmvEgZC55Cg)
+Features:
+User Registration: Register new users with email, password, and name.
+Email Verification: Verify user email addresses using tokens.
+Password Reset: Request and reset passwords.
+Login/Logout: Authenticate users and manage sessions.
+Protected Routes: Ensure only authenticated users can access certain pages.
 
-About This Course:
+Project Structure:
 
--   🔧 Backend Setup
--   🗄️ Database Setup
--   🔐 Signup Endpoint
--   📧 Sending Verify Account Email
--   🔍 Verify Email Endpoint
--   📄 Building a Welcome Email Template
--   🚪 Logout Endpoint
--   🔑 Login Endpoint
--   🔄 Forgot Password Endpoint
--   🔁 Reset Password Endpoint
--   ✔️ Check Auth Endpoint
--   🌐 Frontend Setup
--   📋 Signup Page UI
--   🔓 Login Page UI
--   ✅ Email Verification Page UI
--   📤 Implementing Signup
--   📧 Implementing Email Verification
--   🔒 Protecting Our Routes
--   🔑 Implementing Login
--   🏠 Dashboard Page
--   🔄 Implementing Forgot Password
--   🚀 Super Detailed Deployment
--   ✅ This is a lot of work. Support my work by subscribing to the [Channel](https://www.youtube.com/@asaprogrammer_)
+Backend Setup:
+1. Clone the Repository:
+git clone <repository-url>
+cd backend
 
-### Setup .env file
+2. Install Dependencies:
+npm install
 
-```bash
-MONGO_URI=your_mongo_uri
-PORT=5000
-JWT_SECRET=your_secret_key
-NODE_ENV=development
+3. Environment Variables:
+Create a .env file in the backend directory with the following content:
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>?retryWrites=true&w=majority
+JWT_SECRET=<your-jwt-secret>
+MAILTRAP_API_KEY=<your-mailtrap-api-key>
+CLIENT_URL=<your-client-url>
 
-MAILTRAP_TOKEN=your_mailtrap_token
-MAILTRAP_ENDPOINT=https://send.api.mailtrap.io/
+4. Run the Server:
+npm start
 
-CLIENT_URL= http://localhost:5173
-```
+Backend API Endpoints:
+POST /api/signup: Register a new user.
+POST /api/verify-email: Verify user’s email with a token.
+POST /api/login: Log in a user.
+POST /api/logout: Log out a user.
+POST /api/forgot-password: Request a password reset link.
+POST /api/reset-password: Reset the password using a reset token.
+GET /api/check-auth: Check if the user is authenticated.
 
-### Run this app locally
+Frontend Setup:
+1. Clone the Repository:
+git clone <repository-url>
+cd frontend
 
-```shell
+2. Install Dependencies:
+npm install
+
+3. Environment Variables:
+Create a .env file in the frontend directory with the following content:
+VITE_API_URL=http://localhost:5000/api
+
+4. Run the Development Server:
+npm run dev
+
+5. Build for Production:
 npm run build
-```
 
-### Start the app
+Frontend Folder Structure:
+src/components/: Contains reusable React components.
+src/pages/: Contains different pages of the application.
+src/utils/: Contains utility functions.
+src/styles/: Contains Tailwind CSS configuration and custom styles.
 
-```shell
-npm run start
-```
+Tools and Technologies:
 
-### I'll see you in the next one! 🚀
+Backend:
+Node.js: JavaScript runtime.
+Express: Web framework for Node.js.
+MongoDB: NoSQL database.
+Mailtrap: Email testing tool.
+bcryptjs: Password hashing.
+crypto: Secure token generation.
+jsonwebtoken: JWT for authentication.
+
+Frontend:
+React: JavaScript library for building user interfaces.
+Vite: Build tool and development server.
+Tailwind CSS: Utility-first CSS framework.
+TypeScript: Superset of JavaScript for type safety.
+
+Troubleshooting:
+
+Backend:
+Ensure your MongoDB URI is correct and that your IP address is whitelisted in MongoDB Atlas.
+Verify your Mailtrap credentials and configuration.
+Check .env file for missing or incorrect variables.
+
+Frontend:
+Make sure the backend server is running and accessible at the specified API URL.
+Verify that environment variables are correctly set.
+Check browser console for any errors during development.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+Replace placeholders like `<repository-url>`, `<username>`, `<password>`, `<cluster-url>`, `<dbname>`, `<your-jwt-secret>`, `<your-mailtrap-api-key>`, and `<your-client-url>` with your actual values.
