@@ -1,16 +1,16 @@
-Secure App - Full Stack Authentication System:
+# Full Stack Authentication System
 
-Overview:
+## Overview
+
 This repository contains a full-stack authentication system with separate frontend and backend implementations. The backend is built with Node.js and Express, using MongoDB for data storage and Mailtrap for email handling. The frontend is built with React, Vite, and Tailwind CSS.
 
-Features:
-User Registration: Register new users with email, password, and name.
-Email Verification: Verify user email addresses using tokens.
-Password Reset: Request and reset passwords.
-Login/Logout: Authenticate users and manage sessions.
-Protected Routes: Ensure only authenticated users can access certain pages.
+## Features
 
-Project Structure:
+- **User Registration**: Register new users with email, password, and name.
+- **Email Verification**: Verify user email addresses using tokens.
+- **Password Reset**: Request and reset passwords.
+- **Login/Logout**: Authenticate users and manage sessions.
+- **Protected Routes**: Ensure only authenticated users can access certain pages.
 
 Backend Setup:
 1. Clone the Repository:
