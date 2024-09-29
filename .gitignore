@@ -10,3 +10,4 @@ dist/
 # Other common ignores (optional)
 *.log
 .DS_Store
+.screenshot
