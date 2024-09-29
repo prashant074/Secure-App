@@ -119,9 +119,31 @@ This repository contains a full-stack authentication system with separate fronte
 - Check the browser console for any errors during development.
 
 ---
+## Screenshots of System in Action
 
-## Screenshots:
+### Figure 1: Registration page with password strength feedback and CAPTCHA validation.
+![Registration Page](screenshot/register.png)
 
+### Figure 2: Email verification with OTP entry.
+![Email Verification](screenshot/verifyemail.png)
+
+### Figure 3: Login page for registered users.
+![Login Page](screenshot/login.png)
+
+### Figure 4: Welcome message from Company in email after login.
+![Welcome Email](screenshot/welcomemessage.png)
+
+### Figure 5: Dashboard accessible after successful login.
+![Dashboard](screenshot/Dashboard.png)
+
+### Figure 6: Password reset request page.
+![Password Reset Request](screenshot/passwordreset.png)
+
+### Figure 7: Error handling for invalid inputs (e.g., wrong OTP or incorrect login).
+![Error Handling](screenshot/error-handling.png)
+
+### Figure 8: Saved user data in MongoDB.
+![User Data in MongoDB](screenshot/mongodb.png)
 ---
 
 ## Contribution Guidelines
