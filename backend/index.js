@@ -3,33 +3,44 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
+import { connectDB } from "./db/connectDB.js"; // MongoDB connection function
+import authRoutes from "./routes/auth.route.js"; // Authentication routes
 
-import { connectDB } from "./db/connectDB.js";
-
-import authRoutes from "./routes/auth.route.js";
-
-dotenv.config();
+dotenv.config(); // Load environment variables
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const __dirname = path.resolve();
+const __dirname = path.resolve(); // For resolving file paths
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+// Middleware Configuration
 
-app.use(express.json()); // allows us to parse incoming requests:req.body
-app.use(cookieParser()); // allows us to parse incoming cookies
+// Enable CORS for cross-origin requests from the frontend
+app.use(cors({
+  origin: "http://localhost:5173", // Frontend URL (during development)
+  credentials: true, // Allow credentials (cookies) to be sent with requests
+}));
 
-app.use("/api/auth", authRoutes);
+// Parse incoming JSON requests (req.body)
+app.use(express.json());
 
+// Parse incoming cookies (req.cookies)
+app.use(cookieParser());
+
+// API Routes
+app.use("/api/auth", authRoutes); // Authentication-related routes
+
+// Serve frontend in production mode
 if (process.env.NODE_ENV === "production") {
-	app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-	app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-	});
+  app.use(express.static(path.join(__dirname, "/frontend/dist"))); // Serve the frontend build
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html")); // Fallback to index.html for any unmatched route
+  });
 }
 
+// Start server and connect to MongoDB
 app.listen(PORT, () => {
-	connectDB();
-	console.log("Server is running on port: ", PORT);
+  connectDB(); // Establish connection to MongoDB
+  console.log("Server is running on port:", PORT);
 });
+
+export default app;

@@ -104,7 +104,7 @@ const LoginPage = () => {
 			{/* Image Section */}
 			<div className='w-1/2 bg-gray-900 bg-opacity-70'>
 				<img
-					src="/path/to/your/image.jpg" // Replace with the path to your image
+					src="https://th.bing.com/th/id/OIP.pqBJBD1voETobLlZCTJ5vQHaHa?w=216&h=216&c=7&r=0&o=5&dpr=2&pid=1.7" // Replace with the path to your image
 					alt="Login"
 					className="w-full h-full object-cover"
 				/>

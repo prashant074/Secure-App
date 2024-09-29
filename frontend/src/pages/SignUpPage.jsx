@@ -164,12 +164,13 @@ const SignUpPage = () => {
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5 }}
-			className="flex max-w-4xl w-full mx-auto bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden"
+			className="flex max-w-4xl w-full mx-auto bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl 
+			rounded-2xl shadow-xl overflow-hidden"
 		>
 			{/* Image Section */}
 			<div className="w-1/2 bg-gray-900 bg-opacity-70">
 				<img
-					src="/path/to/your/image.jpg" // Replace with the path to your image
+					src="https://th.bing.com/th/id/OIP.4VSnWBzow33kEEgnaSoiJwHaHa?w=187&h=187&c=7&r=0&o=5&dpr=2&pid=1.7" // Replace with the path to your image
 					alt="Sign Up"
 					className="w-full h-full object-cover"
 				/>
@@ -177,7 +178,8 @@ const SignUpPage = () => {
 
 			{/* Form Section */}
 			<div className="w-1/2 p-8">
-				<h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-red-400 to-red-500 text-transparent bg-clip-text">
+				<h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-red-400 to-red-500 
+				text-transparent bg-clip-text">
 					Create Account
 				</h2>
 
@@ -214,7 +216,9 @@ const SignUpPage = () => {
 						/>
 					</div>
 					<motion.button
-						className="mt-5 w-full py-3 px-4 bg-gradient-to-r from-red-500 to-rose-600 text-white font-bold rounded-lg shadow-lg hover:from-red-600 hover:to-rose-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition duration-200"
+						className="mt-5 w-full py-3 px-4 bg-gradient-to-r from-red-500 to-rose-600 
+						text-white font-bold rounded-lg shadow-lg hover:from-red-600 hover:to-rose-700 focus:outline-none 
+						focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition duration-200"
 						whileHover={{ scale: 1.02 }}
 						whileTap={{ scale: 0.98 }}
 						type="submit"
