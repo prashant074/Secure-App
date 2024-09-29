@@ -53,78 +53,64 @@ curl -X POST http://localhost:5000/api/signup \
 -H "Content-Type: application/json" \
 -d '{"email": "user@example.com", "password": "securePassword123", "name": "User Name"}'
 
+Frontend Setup
+Clone the Repository:
 
-## Frontend Setup
+bash
+Copy code
+git clone https://github.com/yourusername/Secure-App.git
+cd frontend
+Install Dependencies:
 
-1. **Clone the Repository**:
-    ```bash
-    git clone <repository-url>
-    cd frontend
-    ```
+bash
+Copy code
+npm install
+Environment Variables: Create a .env file in the frontend directory with the following content:
 
-2. **Install Dependencies**:
-    ```bash
-    npm install
-    ```
+env
+Copy code
+VITE_API_URL=http://localhost:5000/api
+Run the Development Server:
 
-3. **Environment Variables**:
-   Create a `.env` file in the `frontend` directory with the following content:
-    ```env
-    VITE_API_URL=http://localhost:5000/api
-    ```
+bash
+Copy code
+npm run dev
+Build for Production:
 
-4. **Run the Development Server**:
-    ```bash
-    npm run dev
-    ```
+bash
+Copy code
+npm run build
+Frontend Folder Structure
+src/components/: Contains reusable React components.
+src/pages/: Contains different pages of the application.
+src/utils/: Contains utility functions.
+src/styles/: Contains Tailwind CSS configuration and custom styles.
+Tools and Technologies
+Backend:
+Node.js: JavaScript runtime.
+Express: Web framework for Node.js.
+MongoDB: NoSQL database.
+Mailtrap: Email testing tool.
+bcryptjs: Password hashing.
+crypto: Secure token generation.
+jsonwebtoken: JWT for authentication.
+Frontend:
+React: JavaScript library for building user interfaces.
+Vite: Build tool and development server.
+Tailwind CSS: Utility-first CSS framework.
+TypeScript: Superset of JavaScript for type safety.
+Troubleshooting
+Backend:
+Ensure your MongoDB URI is correct and that your IP address is whitelisted in MongoDB Atlas.
+Verify your Mailtrap credentials and configuration.
+Check the .env file for missing or incorrect variables.
+Frontend:
+Make sure the backend server is running and accessible at the specified API URL.
+Verify that environment variables are correctly set.
+Check the browser console for any errors during development.
+Screenshots
+(Add relevant screenshots here to illustrate UI and workflows.)
 
-5. **Build for Production**:
-    ```bash
-    npm run build
-    ```
-
----
-
-## Frontend Folder Structure
-- `src/components/`: Contains reusable React components.
-- `src/pages/`: Contains different pages of the application.
-- `src/utils/`: Contains utility functions.
-- `src/styles/`: Contains Tailwind CSS configuration and custom styles.
-
----
-
-## Tools and Technologies
-
-### Backend:
-- **Node.js**: JavaScript runtime.
-- **Express**: Web framework for Node.js.
-- **MongoDB**: NoSQL database.
-- **Mailtrap**: Email testing tool.
-- **bcryptjs**: Password hashing.
-- **crypto**: Secure token generation.
-- **jsonwebtoken**: JWT for authentication.
-
-### Frontend:
-- **React**: JavaScript library for building user interfaces.
-- **Vite**: Build tool and development server.
-- **Tailwind CSS**: Utility-first CSS framework.
-- **TypeScript**: Superset of JavaScript for type safety.
-
----
-
-## Tools and Technologies:
-
-### Backend:
-- Ensure your MongoDB URI is correct and that your IP address is whitelisted in MongoDB Atlas.
-- Verify your Mailtrap credentials and configuration.
-- Check the `.env` file for missing or incorrect variables.
-
-### Frontend:
-- Make sure the backend server is running and accessible at the specified API URL.
-- Verify that environment variables are correctly set.
-- Check the browser console for any errors during development.
-
-### Screenshots:
 Contribution Guidelines
 Contributions to enhance the functionality and security of this project are welcome. To contribute:
 
@@ -132,35 +118,17 @@ Fork the repository.
 Create a new branch.
 Make your changes.
 Submit a pull request with a detailed description of your modifications.
-
 Contact Information
 For any inquiries or feedback, please reach out to:
 
 Email: your-email@example.com
 
-Troubleshooting
-Backend:
-Ensure your MongoDB URI is correct and that your IP address is whitelisted in MongoDB Atlas.
-Verify your Mailtrap credentials and configuration.
-Check the .env file for missing or incorrect variables.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-Frontend:
-Make sure the backend server is running and accessible at the specified API URL.
-Verify that environment variables are correctly set.
-Check the browser console for any errors during development.
----
+Important
+Replace placeholders like <repository-url>, <username>, <password>, <cluster-url>, <dbname>, <your-jwt-secret>, <your-mailtrap-api-key>, and <your-client-url> with your actual values.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-### Important
-Replace placeholders like `<repository-url>`, `<username>`, `<password>`, `<cluster-url>`, `<dbname>`, `<your-jwt-secret>`, `<your-mailtrap-api-key>`, and `<your-client-url>` with your actual values.
-
-### Instructions for Use
-- Copy and paste the content above into a new `README.txt` file in your project directory.
-- Remember to replace the placeholders with your actual values and add any relevant screenshots where indicated.
-
-
-
+### Instructions
+- Make sure to replace the placeholders with your actual information, especially the repository URL and any sensitive credentials.
+- Add screenshots or other relevant visuals where indicated to enhance your documentation.
